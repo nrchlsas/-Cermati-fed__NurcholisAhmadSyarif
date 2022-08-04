@@ -52,5 +52,13 @@ body {
   z-index: 999999;
   bottom : 0;
   left : 0;
+  width: 30%;
 
 }
+
+@media (max-width: 767.98px) { 
+  .fadeOut{
+    width: 100%;
+  
+  }
+ }
