@@ -52,8 +52,9 @@ class App extends Component {
 
 return (
 
-  <div style={{ backgroundColor: '#e5e5e5' }}>
-    <Toast style={{ width: 'auto', }} show={this.state.distoastHeader}>
+  <div style={{ backgroundColor: '#e5e5e5', fontSize:'14px' }}>
+    {/* position: 'fixed',zIndex:'99999' */}
+    <Toast style={{ width: 'auto',  }} show={this.state.distoastHeader}>
       <Container>
         <Row>
           <Col md={3}>
@@ -69,11 +70,15 @@ return (
         </Row>
       </Container>
 
+
+
     </Toast>
 
-    <Carousel>
 
+
+    <Carousel>
       <Carousel.Item>
+
         <img
           className="d-block w-10"
           src={image}
@@ -82,6 +87,14 @@ return (
           height="350" />
 
         <Carousel.Caption>
+        <img
+              src={logo}
+              width="50"
+              height="50"
+              className="d-inline-block align-top"
+              alt="React Bootstrap logo"
+              style={{  zIndex: '999999', position: 'relative', backgroundColor:'transparent', marginLeft:'-200'}}
+            />
           <h3>Hello! I'm Nurcholis AS</h3>
           <p>Consult, Design, and Develop Websites
             Have something great in mind? Feel free to contact me.
@@ -93,7 +106,7 @@ return (
 
         </Carousel.Caption>
       </Carousel.Item>
-    </Carousel>
+      </Carousel>
     <Container style={{ marginTop: '30px' }} >
       <Row className="justify-content-md-center">
 
@@ -108,7 +121,7 @@ return (
     <Container >
       <Row style={{ marginTop: '30px' }}>
         <Col xs={16} md={4}>
-          <Card style={{ marginTop: '30px', height: '200px', backgroundColor: '#e5e5e5' }}>
+          <Card style={{ marginTop: '30px', height: 'auto', backgroundColor: '#e5e5e5' }}>
             <Card.Body>
               <Card.Title>Consult</Card.Title>
               <Card.Text>
@@ -120,7 +133,7 @@ return (
           </Card>
         </Col>
         <Col xs={16} md={4}>
-          <Card style={{ marginTop: '30px', height: '200px', backgroundColor: '#e5e5e5' }}>
+          <Card style={{ marginTop: '30px', height: 'auto', backgroundColor: '#e5e5e5' }}>
             <Card.Body>
               <Card.Title>Design</Card.Title>
               <Card.Text>
@@ -132,7 +145,7 @@ return (
           </Card>
         </Col>
         <Col xs={16} md={4}>
-          <Card style={{ marginTop: '30px', height: '200px', backgroundColor: '#e5e5e5' }}>
+          <Card style={{ marginTop: '30px', height: 'auto', backgroundColor: '#e5e5e5' }}>
             <Card.Body>
               <Card.Title>Develop</Card.Title>
               <Card.Text>
@@ -146,7 +159,7 @@ return (
       </Row>
       <Row mt-4>
         <Col xs={16} md={4}>
-          <Card style={{ marginTop: '30px', height: '200px', backgroundColor: '#e5e5e5' }}>
+          <Card style={{ marginTop: '30px', height: 'auto', backgroundColor: '#e5e5e5' }}>
             <Card.Body>
               <Card.Title>Marketing</Card.Title>
               <Card.Text>
@@ -158,7 +171,7 @@ return (
           </Card>
         </Col>
         <Col xs={16} md={4}>
-          <Card style={{ marginTop: '30px', height: '200px', backgroundColor: '#e5e5e5' }}>
+          <Card style={{ marginTop: '30px', height: 'auto', backgroundColor: '#e5e5e5' }}>
             <Card.Body>
               <Card.Title>Manage</Card.Title>
               <Card.Text>
@@ -170,7 +183,7 @@ return (
           </Card>
         </Col>
         <Col xs={16} md={4}>
-          <Card style={{ marginTop: '30px', height: '200px', backgroundColor: '#e5e5e5' }}>
+          <Card style={{ marginTop: '30px', height: 'auto', backgroundColor: '#e5e5e5' }}>
             <Card.Body>
               <Card.Title>Evolve</Card.Title>
               <Card.Text >
@@ -184,10 +197,10 @@ return (
       </Row>
     </Container>
 
-    <ToastContainer >
+      <Container>
       <Row>
-        <Col md={2} className="mb-2">
-          <Toast xs={16} style={{ width: '30%', backgroundColor: '#2683bb', position: 'fixed' }} onClose={this.toggleShowB} show={this.state.distoast} animation={false} className='fadeOut' position='bottom-start' delay={30000} autohide>
+        <Col md={4} xs={16}>
+          <Toast style={{ width: 'auto', backgroundColor: '#2683bb', position: 'fixed' }} onClose={this.toggleShowB} show={this.state.distoast} animation={false} className='fadeOut' position='bottom-start' delay={30000} autohide>
             <Toast.Header>
               <strong className="me-auto"><h6>Get latest updates in web technologies</h6></strong>
               <small className="text-muted" ></small>
@@ -195,7 +208,7 @@ return (
             <strong className="me-auto"></strong>
               <small className="text-muted" ></small>
             <Toast.Body>
-              <h7>I write articles related to web technologies, Such as Design trends, develompment tools, UI/UX case studies and reviews, and more, Sing up  to my newsletter to get them all</h7></Toast.Body>
+              <p>I write articles related to web technologies, Such as Design trends,develompment tools,<p> UI/UX case studies and reviews, and more, Sing up  to my newsletter to get them all</p></p></Toast.Body>
             <Container>
               <InputGroup className="mb-3" size="sm">
 
@@ -209,8 +222,8 @@ return (
           </Toast>
         </Col>
       </Row>
-    </ToastContainer>
-    <CDBFooter className="shadow" style={{ marginTop: '120px' }}>
+      </Container>
+    <CDBFooter className="shadow" style={{ marginTop: '100px' }}>
 
       <CDBBox
         display="flex"
@@ -226,15 +239,6 @@ return (
           <small className="ml-2">&copy; Nurcholis, 2022. All rights reserved.</small>
         </CDBBox>
         <CDBBox display="flex">
-          {/* <CDBBtn flat color="dark" className="p-2">
-            <CDBIcon fab icon="facebook-f" />
-          </CDBBtn>
-          <CDBBtn flat color="dark" className="mx-3 p-2">
-            <CDBIcon fab icon="twitter" />
-          </CDBBtn>
-          <CDBBtn flat color="dark" className="p-2">
-            <CDBIcon fab icon="instagram" />
-          </CDBBtn> */}
         </CDBBox>
       </CDBBox>
     </CDBFooter>
