@@ -1,5 +1,11 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: aliceblue;
 }
 
 .App-logo {
@@ -35,4 +41,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.textt {
+  text-align: center;
+}
+
+.fadeOut{
+  position: relative;
+  z-index: 9999;
+  bottom : 0;
+  left : 0;
+
 }
